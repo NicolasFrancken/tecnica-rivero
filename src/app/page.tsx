@@ -19,7 +19,7 @@ export default function Home() {
       <div>
         <CustomNavbar />
         <main
-          className=" min-h-[calc(100vh-80px)] py-16 mt-[80px]  px-3 md:px-12 flex flex-col background1 items-center md:items-start"
+          className=" min-h-[calc(100vh)] py-40   px-3 md:px-12 flex flex-col background1 items-center md:items-start"
           id="main"
         >
           <h1 className="font-bold text-4xl md:text-5xl xl:text-7xl text-center md:text-start">
@@ -53,11 +53,11 @@ export default function Home() {
               <p className="font-semibold text-lg md:text-xl xl:text-2xl text-center">
                 Para comenzar a trabajar con nosotros escribinos un mail a
                 <a
-                  className="text-[rgb(179,58,45)] transition-colors hover:text-[rgb(179,58,45)]/50"
-                  href="mailto:tecnicarivero@hotmail.com"
+                  className="text-[rgb(179,58,45)] transition-colors hover:text-[rgb(179,58,45)]/50 underline"
+                  href="mailto:tecnicarivero@gmail.com"
                 >
                   {" "}
-                  tecnicarivero@hotmail.com
+                  tecnicarivero@gmail.com
                 </a>{" "}
                 o acercarte a nuestro local ubicado en la calle
                 <span className="text-[rgb(179,58,45)]"> Gallardo 202.</span>
@@ -77,9 +77,12 @@ export default function Home() {
             >
               <ul className="font-semibold text-sm md:text-base xl:text-xl list-disc ml-6">
                 <li>Asesoramiento en la selección del equipo</li>
-                <li>Todos los insumos incluidos</li>
+                <li>Todos los insumos y repuestos incluidos*</li>
                 <li>Servicio técnico personalizado</li>
               </ul>
+              <p className="text-xs md:text-sm font-semibold text-right">
+                * No incluye papel
+              </p>
             </AccordionItem>
             <AccordionItem
               key="2"
@@ -106,15 +109,12 @@ export default function Home() {
                 la necesidad. Establecemos un abono mensual, que incluye una
                 cantidad de copias libres, de acuerdo al equipo elegido. El
                 abono incluye además, todos los{" "}
-                <span className="text-[rgb(179,58,45)]">insumos</span>*,{" "}
+                <span className="text-[rgb(179,58,45)]">insumos</span>,{" "}
                 <span className="text-[rgb(179,58,45)]">repuestos</span>{" "}
                 necesarios y un completo{" "}
                 <span className="text-[rgb(179,58,45)]">servicio técnico</span>{" "}
                 para cubrir cualquier situación relacionada al normal uso y
                 funcionamiento.
-              </p>
-              <p className="text-xs md:text-sm font-semibold text-right mt-3">
-                * Resmas de papel no incluidas
               </p>
             </AccordionItem>
           </Accordion>

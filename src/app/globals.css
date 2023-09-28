@@ -34,6 +34,13 @@ body {
   -o-background-size: cover;
 }
 
+.background3 {
+  background-image: url("../../public/background4.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+}
+
 @media only screen and (max-width: 767px) {
   .background1 {
     background-image: url("../../public/background3.png");
