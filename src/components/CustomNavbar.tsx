@@ -23,8 +23,12 @@ export default function CustomNavbar() {
       isBordered={true}
       isBlurred={true}
       maxWidth="full"
-      onMenuOpenChange={setIsMenuOpen}
-      className="fixed h-20 p-0 md:px-6"
+      isMenuOpen={isMenuOpen}
+      onMenuOpenChange={() => setIsMenuOpen(!isMenuOpen)}
+      className="fixed h-20 px-3 md:px-12"
+      classNames={{
+        wrapper: "px-0",
+      }}
     >
       <NavbarBrand as={Link} href={"#main"}>
         <Image
@@ -36,14 +40,14 @@ export default function CustomNavbar() {
         />
       </NavbarBrand>
       <NavbarItem>
-        <Link
-          isBlock
-          color="foreground"
+        <Button
+          size="lg"
+          as={Link}
+          href={"/equipos"}
           className="font-bold text-lg hidden md:flex bg-transparent"
-          as={Button}
         >
           Equipos
-        </Link>
+        </Button>
       </NavbarItem>
       <NavbarItem>
         <Button
@@ -55,12 +59,12 @@ export default function CustomNavbar() {
           CONTRATÁ
         </Button>
       </NavbarItem>
-      <NavbarMenuToggle className="md:hidden text-black" />
+      <NavbarMenuToggle className="md:hidden" />
       <NavbarMenu className="flex flex-col items-center justify-center">
         <NavbarMenuItem>
           <Button
-            size="lg"
-            className="font-bold bg-[rgb(179,58,45)] text-white"
+            size="md"
+            className="font-semibold bg-[rgb(179,58,45)] text-white"
             as={Link}
             href={"#contratá"}
             onClick={handleContrataClick}
@@ -69,14 +73,15 @@ export default function CustomNavbar() {
           </Button>
         </NavbarMenuItem>
         <NavbarMenuItem>
-          <Link
-            isBlock
-            color="foreground"
-            className="font-bold text-lg bg-transparent"
-            as={Button}
+          <Button
+            size="md"
+            className="font-semibold bg-transparent "
+            as={Link}
+            href={"/equipos"}
+            onClick={handleContrataClick}
           >
             Equipos
-          </Link>
+          </Button>
         </NavbarMenuItem>
       </NavbarMenu>
     </Navbar>
