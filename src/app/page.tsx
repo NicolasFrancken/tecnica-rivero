@@ -113,7 +113,7 @@ export default function Home() {
                 para cubrir cualquier situación relacionada al normal uso y
                 funcionamiento.
               </p>
-              <p className="text-xs md:text-sm font-semibold text-right mt-1">
+              <p className="text-xs md:text-sm font-semibold text-right mt-3">
                 * Resmas de papel no incluidas
               </p>
             </AccordionItem>
