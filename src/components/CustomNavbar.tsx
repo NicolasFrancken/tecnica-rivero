@@ -9,10 +9,24 @@ import {
   Button,
   NavbarMenu,
 } from "@nextui-org/react";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { usePathname } from "next/navigation";
 
 export default function CustomNavbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [logo, setLogo] = useState("#main");
+  const [button, setButton] = useState("#contratá");
+  const path = usePathname();
+
+  useEffect(() => {
+    if (path === "/") {
+      setLogo("#main");
+      setButton("#contratá");
+    } else {
+      setLogo("http://localhost:3000");
+      setButton("http://localhost:3000/#contratá");
+    }
+  }, [path]);
 
   const handleContrataClick = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -30,7 +44,7 @@ export default function CustomNavbar() {
         wrapper: "px-0",
       }}
     >
-      <NavbarBrand as={Link} href={"#main"}>
+      <NavbarBrand as={Link} href={logo}>
         <Image
           src={"/logo.png"}
           alt="logo"
@@ -54,7 +68,7 @@ export default function CustomNavbar() {
           size="lg"
           className="font-bold bg-[rgb(179,58,45)] hidden md:flex text-white"
           as={Link}
-          href="#contratá"
+          href={button}
         >
           CONTRATÁ
         </Button>
@@ -66,7 +80,7 @@ export default function CustomNavbar() {
             size="md"
             className="font-semibold bg-[rgb(179,58,45)] text-white"
             as={Link}
-            href={"#contratá"}
+            href={button}
             onClick={handleContrataClick}
           >
             CONTRATÁ

@@ -31,10 +31,10 @@ export default function Footer() {
         <p className="flex justify-center items-center">
           <BiMailSend className="mr-2 md:mr-4 w-5 h-5 md:w-8 md:h-8" />{" "}
           <a
-            href="mailto:tecnicarivero@hotmail.com"
+            href="mailto:tecnicarivero@gmail.com"
             className="transition-colors hover:text-white/50 "
           >
-            tecnicarivero@hotmail.com
+            tecnicarivero@gmail.com
           </a>
         </p>
       </div>
