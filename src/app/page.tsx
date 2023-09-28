@@ -22,8 +22,8 @@ export default function Home() {
           className=" min-h-[calc(100vh-80px)] py-16 mt-[80px]  px-3 md:px-12 flex flex-col background1 items-center md:items-start"
           id="main"
         >
-          <h1 className="font-bold text-3xl md:text-5xl xl:text-7xl text-center md:text-start">
-            SERVICIO DE ALQUILER <br />
+          <h1 className="font-bold text-4xl md:text-5xl xl:text-7xl text-center md:text-start">
+            SERVICIO DE ALQUILER <br className="hidden md:inline" />
             DE <span className="text-[rgb(179,58,45)]">FOTOCOPIADORAS</span>
           </h1>
 
@@ -46,7 +46,7 @@ export default function Home() {
           id="contratá"
         >
           <Card className="flex flex-col">
-            <CardHeader className="p-3 pb-3 md:pb-3 md:p-6 text-xl md:text-2xl xl:text-4xl font-bold flex justify-center items-center">
+            <CardHeader className="p-3 pb-3 md:pb-3 md:p-6 text-2xl md:text-3xl xl:text-4xl font-bold flex justify-center items-center">
               Contratá nuestros servicios
             </CardHeader>
             <CardBody className="flex flex-col justify-center items-center p-6 pt-0 md:p-6 md:pt-0">
