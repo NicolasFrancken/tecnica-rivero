@@ -19,7 +19,7 @@ export default function Home() {
       <div>
         <CustomNavbar />
         <main
-          className=" min-h-[calc(100vh)] py-40   px-3 md:px-12 flex flex-col background1 items-center md:items-start"
+          className=" min-h-[calc(100vh)] py-28 md:py-40 px-3 md:px-12 flex flex-col background1 items-center md:items-start"
           id="main"
         >
           <h1 className="font-bold text-4xl md:text-5xl xl:text-7xl text-center md:text-start">

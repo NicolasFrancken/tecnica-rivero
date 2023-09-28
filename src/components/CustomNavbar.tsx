@@ -51,6 +51,7 @@ export default function CustomNavbar() {
           width={200}
           height={70}
           className="w-[150px] md:w-[200px]"
+          priority
         />
       </NavbarBrand>
       <NavbarItem>
