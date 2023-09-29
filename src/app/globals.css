@@ -41,6 +41,24 @@ body {
   background-position: top;
 }
 
+.marquee-container {
+  width: 100%; /* Make sure the container takes the full width of its parent */
+  overflow: hidden; /* Hide the content that overflows the container */
+}
+
+.marquee-content {
+  white-space: nowrap; /* Prevent the content from wrapping to the next line */
+  animation: marquee 30s linear infinite; /* Adjust the duration (30s) for slower or faster scrolling */
+}
+@keyframes marquee {
+  0% {
+    transform: translateX(100%); /* Start off-screen to the right */
+  }
+  100% {
+    transform: translateX(-100%); /* End off-screen to the left */
+  }
+}
+
 @media only screen and (max-width: 767px) {
   .background1 {
     background-image: url("../../public/background3.png");
