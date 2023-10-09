@@ -20,7 +20,7 @@ export default function Home() {
       <div>
         <CustomNavbar />
         <main
-          className=" min-h-screen py-28 pt-52 md:py-40 px-3 md:px-12 flex flex-col background1 items-center  md:items-start"
+          className=" min-h-screen py-28 pt-40 md:py-40 px-3 md:px-12 flex flex-col background1 items-center  md:items-start"
           id="main"
         >
           <h1 className="font-bold text-4xl md:text-5xl xl:text-7xl text-center md:text-start">
@@ -36,7 +36,7 @@ export default function Home() {
             size="lg"
             className="font-semibold bg-[rgb(179,58,45)] flex text-white mt-3 text-xl"
             as={Link}
-            href={"#contratá"}
+            href={"https://tecnicarivero.netlify.app/#contratá"}
           >
             Alquilá hoy <BiDownArrowAlt className="h-8 w-6 ml-2" />
           </Button>

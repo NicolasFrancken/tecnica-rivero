@@ -23,8 +23,8 @@ export default function CustomNavbar() {
       setLogo("#main");
       setButton("#contratá");
     } else {
-      setLogo("http://localhost:3000");
-      setButton("http://localhost:3000/#contratá");
+      setLogo("https://tecnicarivero.netlify.app/");
+      setButton("https://tecnicarivero.netlify.app/#contratá");
     }
   }, [path]);
 
