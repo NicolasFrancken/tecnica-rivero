@@ -34,7 +34,7 @@ export default function Home() {
             DE <span className="text-[rgb(179,58,45)]">FOTOCOPIADORAS</span>
           </h1>
 
-          <h3 className="font-bold  text-lg md:text-2xl xl:text-4xl  text-center md:text-start bg-white/80 md:bg-white/60 px-3 py-1 rounded-medium mt-2 ">
+          <h3 className="font-bold  text-base md:text-2xl xl:text-4xl  text-center md:text-start bg-white/80 md:bg-white/60 px-3 py-1 rounded-medium mt-2 ">
             REPARACIONES Y <br className="md:hidden" /> VENTA DE INSUMOS
           </h3>
 
