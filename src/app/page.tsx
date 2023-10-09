@@ -7,8 +7,6 @@ import Link from "next/link";
 import CustomNavbar from "@/components/CustomNavbar";
 import { Accordion, AccordionItem } from "@nextui-org/react";
 import Footer from "@/components/Footer";
-import Image from "next/image";
-import Marquee from "react-fast-marquee";
 
 export default function Home() {
   const itemClasses = {
@@ -35,12 +33,12 @@ export default function Home() {
           className=" min-h-screen py-28 md:py-40 px-3 md:px-12 flex flex-col background1 items-center md:items-start"
           id="main"
         >
-          <h1 className="font-bold text-4xl md:text-5xl xl:text-7xl text-center md:text-start">
+          <h1 className="font-bold text-3xl sm:text-4xl md:text-5xl xl:text-7xl text-center md:text-start">
             SERVICIO DE ALQUILER <br className="hidden md:inline" />
             DE <span className="text-[rgb(179,58,45)]">FOTOCOPIADORAS</span>
           </h1>
 
-          <h3 className="font-bold  text-xl md:text-2xl xl:text-4xl  text-center md:text-start bg-white/80 md:bg-transparent px-3 py-1 md:p-0 rounded-large mt-2">
+          <h3 className="font-bold  text-lg md:text-2xl xl:text-4xl  text-center md:text-start bg-white/80 md:bg-white/60 px-3 py-1 rounded-medium mt-2 ">
             REPARACIONES Y <br className="md:hidden" /> VENTA DE INSUMOS
           </h3>
 
@@ -53,26 +51,6 @@ export default function Home() {
             Alquilá hoy <BiDownArrowAlt className="h-8 w-6 ml-2" />
           </Button>
         </main>
-        {/* <div className="bg-white/70 flex flex-col gap-3 py-3">
-          <h3 className="font-bold text-2xl text-center">
-            TRABAJAMOS CON MARCAS LÍDERES
-          </h3>
-          <Marquee autoFill gradient>
-            {logos.map((l) => {
-              return (
-                <Image
-                  key={l}
-                  src={`/${l}.png`}
-                  alt={l}
-                  width={108}
-                  height={62}
-                  className="w-[108px] h-[62px] mr-20"
-                />
-              );
-            })}
-          </Marquee> */}
-        {/* </div> */}
-        {/* <div className="background2"> */}
         <section
           className="min-h-screen background2 py-16 px-3 md:px-12 2xl:px-96 pt-40 flex flex-col md:justify-center md:items-center gap-3 md:gap-6"
           id="contratá"
@@ -126,9 +104,13 @@ export default function Home() {
                 Nuestro <span className="text-[rgb(179,58,45)]">sistema</span>{" "}
                 lo <span className="text-[rgb(179,58,45)]">libera</span> de
                 posibles
-                <span className="text-[rgb(179,58,45)]"> inconvenientes</span>,{" "}
-                <span className="text-[rgb(179,58,45)]">costos</span> operativos
-                y servicio por{" "}
+                <span className="text-[rgb(179,58,45)]">
+                  {" "}
+                  inconvenientes
+                </span>, <span className="text-[rgb(179,58,45)]">
+                  costos
+                </span>{" "}
+                operativos y servicio por{" "}
                 <span className="text-[rgb(179,58,45)]">mantenimiento</span>.
               </p>
               <p className="font-semibold text-sm md:text-base xl:text-xl">

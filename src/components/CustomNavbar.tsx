@@ -46,7 +46,7 @@ export default function CustomNavbar() {
     >
       <NavbarBrand as={Link} href={logo}>
         <Image
-          src={"/logo.png"}
+          src={"/images/logo.webp"}
           alt="logo"
           width={200}
           height={70}
