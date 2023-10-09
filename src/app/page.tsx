@@ -16,15 +16,7 @@ export default function Home() {
     content: "pt-0 pb-3 px-2",
   };
 
-  const logos = [
-    "ricoh",
-    "lanier",
-    "ledesma",
-    "brother",
-    "samsung",
-    "hp",
-    "lexmark",
-  ];
+  const contrata = "#contratá";
   return (
     <NextUIProvider>
       <div>
@@ -46,7 +38,7 @@ export default function Home() {
             size="lg"
             className="font-semibold bg-[rgb(179,58,45)] flex text-white mt-3 text-xl"
             as={Link}
-            href="#contratá"
+            href={"#contratá"}
           >
             Alquilá hoy <BiDownArrowAlt className="h-8 w-6 ml-2" />
           </Button>
