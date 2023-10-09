@@ -15,17 +15,15 @@ export default function Home() {
     trigger: "py-3 px-2",
     content: "pt-0 pb-3 px-2",
   };
-
-  const contrata = "#contratá";
   return (
     <NextUIProvider>
       <div>
         <CustomNavbar />
         <main
-          className=" min-h-screen py-28 md:py-40 px-3 md:px-12 flex flex-col background1 items-center justify-center md:justify-start md:items-start"
+          className=" min-h-screen py-28 pt-52 md:py-40 px-3 md:px-12 flex flex-col background1 items-center  md:items-start"
           id="main"
         >
-          <h1 className="font-bold text-3xl sm:text-4xl md:text-5xl xl:text-7xl text-center md:text-start">
+          <h1 className="font-bold text-4xl md:text-5xl xl:text-7xl text-center md:text-start">
             SERVICIO DE ALQUILER <br className="hidden md:inline" />
             DE <span className="text-[rgb(179,58,45)]">FOTOCOPIADORAS</span>
           </h1>
