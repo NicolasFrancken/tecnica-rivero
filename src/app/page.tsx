@@ -30,7 +30,7 @@ export default function Home() {
       <div>
         <CustomNavbar />
         <main
-          className=" min-h-screen py-28 md:py-40 px-3 md:px-12 flex flex-col background1 items-center md:items-start"
+          className=" min-h-screen py-28 md:py-40 px-3 md:px-12 flex flex-col background1 items-center justify-center md:justify-start md:items-start"
           id="main"
         >
           <h1 className="font-bold text-3xl sm:text-4xl md:text-5xl xl:text-7xl text-center md:text-start">
