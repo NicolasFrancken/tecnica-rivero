@@ -1,11 +1,17 @@
 "use client";
 
-import { NextUIProvider } from "@nextui-org/react";
 import { BiDownArrowAlt } from "react-icons/bi";
-import { Button, Card, CardHeader, CardBody } from "@nextui-org/react";
-import Link from "next/link";
+import {
+  Button,
+  Card,
+  CardHeader,
+  CardBody,
+  Link,
+  NextUIProvider,
+  Accordion,
+  AccordionItem,
+} from "@nextui-org/react";
 import CustomNavbar from "@/components/CustomNavbar";
-import { Accordion, AccordionItem } from "@nextui-org/react";
 import Footer from "@/components/Footer";
 
 export default function Home() {
@@ -36,7 +42,7 @@ export default function Home() {
             size="lg"
             className="font-semibold bg-[rgb(179,58,45)] flex text-white mt-3 text-xl"
             as={Link}
-            href={"https://tecnicarivero.netlify.app/#contratá"}
+            href={"#contratá"}
           >
             Alquilá hoy <BiDownArrowAlt className="h-8 w-6 ml-2" />
           </Button>
