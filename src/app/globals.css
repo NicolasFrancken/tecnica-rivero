@@ -45,7 +45,8 @@ body {
   background-image: url("../../public/images/background5.png");
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: top;
+  background-position: center;
+
 }
 
 @media only screen and (max-width: 767px) {
@@ -54,6 +55,9 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: 35%;
+  }
+  .background4{
+    background-position: 40%;
   }
 
 }

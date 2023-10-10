@@ -26,32 +26,35 @@ export default function Home() {
       <div>
         <CustomNavbar />
         <main
-          className=" min-h-screen py-28 pt-36 md:py-40 px-3 md:px-12 flex flex-col background1 items-center  md:items-start"
+          className="min-h-[calc(100vh-70px)] md:min-h-screen py-28 pt-36 md:py-40 px-3 md:px-12 flex flex-col background1 items-center justify-between"
           id="main"
         >
-          <h1 className="font-bold text-4xl md:text-5xl xl:text-7xl text-center md:text-start">
+          <h1 className="font-bold text-4xl  md:text-5xl xl:text-7xl text-center md:text-start self-start">
             SERVICIO DE ALQUILER <br className="hidden md:inline" />
             DE <span className="text-[rgb(179,58,45)]">FOTOCOPIADORAS</span>
           </h1>
-
+          {/* 
           <h3 className="font-bold  text-base md:text-2xl xl:text-4xl  text-center md:text-start bg-white/60 px-3 py-1 rounded-medium mt-2 hidden md:flex">
             REPARACIONES Y <br className="md:hidden" /> VENTA DE INSUMOS
-          </h3>
+          </h3> */}
 
           <Button
             size="lg"
-            className="font-semibold bg-[rgb(179,58,45)] flex text-white mt-3 text-xl"
+            className="font-semibold bg-[rgb(179,58,45)] flex text-white mt-3 text-lg sm:text-xl"
             as={Link}
             href={"#contratá"}
           >
             Alquilá hoy <BiDownArrowAlt className="h-8 w-6 ml-2" />
           </Button>
-          <h3 className="font-bold  text-base md:text-2xl xl:text-4xl  text-center md:text-start bg-white/60 px-3 py-1 rounded-medium mt-40 md:hidden">
+          {/* <h3 className="font-bold  text-base md:text-2xl xl:text-4xl  text-center md:text-start bg-white/60 px-3 py-1 rounded-medium mt-40 md:hidden">
             REPARACIONES Y <br className="md:hidden" /> VENTA DE INSUMOS
+          </h3> */}
+          <h3 className="font-bold  text-base md:text-2xl xl:text-4xl  text-center bg-white/80 px-3 py-1 rounded-medium mt-2">
+            REPARACIONES, VENTA DE INSUMOS Y SERVICIO TÉCNICO
           </h3>
         </main>
         <section
-          className="min-h-screen background2 py-16 px-3 md:px-12 2xl:px-96 pt-40 flex flex-col md:justify-center md:items-center gap-3 md:gap-6"
+          className="min-h-screen background2 py-16 px-3 md:px-12 2xl:px-96 pt-32 md:pt-40 flex flex-col md:justify-center md:items-center gap-3 md:gap-6"
           id="contratá"
         >
           <Card className="flex flex-col">
@@ -130,7 +133,7 @@ export default function Home() {
       </div>
       <section
         id="insumos"
-        className="min-h-screen background4 py-16 px-3 md:px-12 2xl:px-96 pt-40 flex flex-col items-center gap-3 md:gap-6"
+        className="min-h-screen background4 py-16 px-3 md:px-12 2xl:px-96 pt-32 md:pt-40 flex flex-col items-center gap-3 md:gap-6"
       >
         <h3 className="bg-background px-4 py-2 rounded-medium text-2xl md:text-3xl xl:text-4xl font-bold text-center w-full lg:w-[910px]">
           Tenemos todos los insumos
@@ -147,7 +150,8 @@ export default function Home() {
                 <li>A4</li>
                 <li>A3</li>
                 <li>
-                  Duplicación 22x34 <br /> (todos los colores)
+                  Duplicación 22x34 <br className="hidden sm:flex" /> (todos los
+                  colores)
                 </li>
               </ul>
             </CardBody>
