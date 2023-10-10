@@ -15,20 +15,23 @@ import { usePathname } from "next/navigation";
 export default function CustomNavbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [logo, setLogo] = useState("#main");
-  const [button, setButton] = useState("#contratá");
+  const [button1, setButton1] = useState("#contratá");
+  const [button2, setButton2] = useState("#insumos");
   const path = usePathname();
 
   useEffect(() => {
     if (path === "/") {
       setLogo("#main");
-      setButton("#contratá");
+      setButton1("#contratá");
+      setButton2("#insumos");
     } else {
       setLogo("https://tecnicarivero.netlify.app/");
-      setButton("https://tecnicarivero.netlify.app/#contratá");
+      setButton1("https://tecnicarivero.netlify.app/#contratá");
+      setButton2("https://tecnicarivero.netlify.app/#insumos");
     }
   }, [path]);
 
-  const handleContrataClick = () => {
+  const handleClick = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
@@ -58,8 +61,18 @@ export default function CustomNavbar() {
         <Button
           size="lg"
           as={Link}
+          href={button2}
+          className="font-bold text-lg hidden md:flex bg-transparent px-0"
+        >
+          Insumos
+        </Button>
+      </NavbarItem>
+      <NavbarItem>
+        <Button
+          size="lg"
+          as={Link}
           href={"/equipos"}
-          className="font-bold text-lg hidden md:flex bg-transparent"
+          className="font-bold text-lg hidden md:flex bg-transparent px-0 mr-1"
         >
           Equipos
         </Button>
@@ -69,7 +82,7 @@ export default function CustomNavbar() {
           size="lg"
           className="font-bold bg-[rgb(179,58,45)] hidden md:flex text-white"
           as={Link}
-          href={button}
+          href={button1}
         >
           CONTRATÁ
         </Button>
@@ -81,8 +94,8 @@ export default function CustomNavbar() {
             size="md"
             className="font-semibold bg-[rgb(179,58,45)] text-white"
             as={Link}
-            href={button}
-            onClick={handleContrataClick}
+            href={button1}
+            onClick={handleClick}
           >
             CONTRATÁ
           </Button>
@@ -90,12 +103,23 @@ export default function CustomNavbar() {
         <NavbarMenuItem>
           <Button
             size="md"
-            className="font-semibold bg-transparent "
+            className="font-semibold bg-transparent mt-4"
             as={Link}
             href={"/equipos"}
-            onClick={handleContrataClick}
+            onClick={handleClick}
           >
             Equipos
+          </Button>
+        </NavbarMenuItem>
+        <NavbarMenuItem>
+          <Button
+            size="md"
+            className="font-semibold bg-transparent "
+            as={Link}
+            href={button2}
+            onClick={handleClick}
+          >
+            Insumos
           </Button>
         </NavbarMenuItem>
       </NavbarMenu>

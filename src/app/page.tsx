@@ -55,7 +55,7 @@ export default function Home() {
           id="contratá"
         >
           <Card className="flex flex-col">
-            <CardHeader className="p-3 pb-3 md:pb-3 md:p-6 text-2xl md:text-3xl xl:text-4xl font-bold flex justify-center items-center">
+            <CardHeader className="p-3 pb-3 md:p-6 md:pb-3  text-2xl md:text-3xl xl:text-4xl font-bold flex justify-center items-center">
               Contratá nuestros servicios
             </CardHeader>
             <CardBody className="flex flex-col justify-center items-center p-6 pt-0 md:p-6 md:pt-0">
@@ -87,7 +87,7 @@ export default function Home() {
               <ul className="font-semibold text-sm md:text-base xl:text-xl list-disc ml-6">
                 <li>Asesoramiento en la selección del equipo</li>
                 <li>Todos los insumos y repuestos incluidos*</li>
-                <li>Servicio técnico personalizado</li>
+                <li>Servicio técnico personalizado post-venta</li>
               </ul>
               <p className="text-xs md:text-sm font-semibold text-right">
                 * No incluye papel
@@ -98,7 +98,6 @@ export default function Home() {
               aria-label="¿Cómo funciona?"
               title="¿Cómo funciona?"
             >
-              {" "}
               <p className="font-semibold text-sm md:text-base xl:text-xl ">
                 Nuestro <span className="text-[rgb(179,58,45)]">sistema</span>{" "}
                 lo <span className="text-[rgb(179,58,45)]">libera</span> de
@@ -129,9 +128,54 @@ export default function Home() {
           </Accordion>
         </section>
       </div>
-
+      <section
+        id="insumos"
+        className="min-h-screen background4 py-16 px-3 md:px-12 2xl:px-96 pt-40 flex flex-col items-center gap-3 md:gap-6"
+      >
+        <h3 className="bg-background px-4 py-2 rounded-medium text-2xl md:text-3xl xl:text-4xl font-bold text-center w-full lg:w-[910px]">
+          Tenemos todos los insumos
+          <br className="sm:hidden" /> que necesites!
+        </h3>
+        <div className="flex flex-col sm:flex-row gap-3 md:gap-6 lg:gap-20 w-full lg:w-[910px] justify-center items-center">
+          <Card className="flex flex-col w-full lg:w-[250px] sm:min-h-[212px] ">
+            <CardHeader className="p-6 pb-3 pt-6 text-xl md:text-2xl xl:text-2xl font-bold ">
+              Papel
+            </CardHeader>
+            <CardBody className="flex flex-col p-6 pt-0 md:p-9 md:pt-0 md:pb-6 md:pr-0 ">
+              <ul className="list-disc ml-5 md:ml-3 font-semibold text-sm lg:text-base">
+                <li>Oficio</li>
+                <li>A4</li>
+                <li>A3</li>
+                <li>
+                  Duplicación 22x34 <br /> (todos los colores)
+                </li>
+              </ul>
+            </CardBody>
+          </Card>
+          <Card className="flex flex-col w-full lg:w-[250px] sm:min-h-[212px] ">
+            <CardHeader className="p-6 pb-3 pt-6 text-xl md:text-2xl xl:text-2xl font-bold ">
+              Toner
+            </CardHeader>
+            <CardBody className="flex flex-col p-6 pt-0 md:p-9 md:pt-0 md:pb-6 ">
+              <ul className="list-disc ml-5 md:ml-3 font-semibold text-sm lg:text-base">
+                <li>Linea Ricoh</li>
+              </ul>
+            </CardBody>
+          </Card>
+          <Card className="flex flex-col w-full lg:w-[250px] sm:min-h-[212px] ">
+            <CardHeader className="p-6 pb-3 pt-6 text-xl md:text-2xl xl:text-2xl font-bold ">
+              Repuestos
+            </CardHeader>
+            <CardBody className="flex flex-col p-6 pt-0 md:p-9 md:pt-0 md:pb-6">
+              <ul className="list-disc ml-5 md:ml-3 font-semibold text-sm lg:text-base">
+                <li>Impresoras multifunción</li>
+                <li>Cartuchos alternativos</li>
+              </ul>
+            </CardBody>
+          </Card>
+        </div>
+      </section>
       <Footer />
-      {/* </div> */}
     </NextUIProvider>
   );
 }
