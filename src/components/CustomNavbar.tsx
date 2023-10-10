@@ -72,7 +72,7 @@ export default function CustomNavbar() {
           size="lg"
           as={Link}
           href={"/equipos"}
-          className="font-bold text-lg hidden md:flex bg-transparent px-0 mr-1"
+          className="font-bold text-lg hidden md:flex bg-transparent px-0 mr-2"
         >
           Equipos
         </Button>

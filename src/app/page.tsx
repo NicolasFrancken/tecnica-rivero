@@ -49,7 +49,7 @@ export default function Home() {
           {/* <h3 className="font-bold  text-base md:text-2xl xl:text-4xl  text-center md:text-start bg-white/60 px-3 py-1 rounded-medium mt-40 md:hidden">
             REPARACIONES Y <br className="md:hidden" /> VENTA DE INSUMOS
           </h3> */}
-          <h3 className="font-bold  text-base md:text-2xl xl:text-4xl  text-center bg-white/80 px-3 py-1 rounded-medium mt-2">
+          <h3 className="font-bold  text-base md:text-2xl xl:text-4xl text-center bg-white/80 p-3 rounded-medium mt-2">
             REPARACIONES, VENTA DE INSUMOS Y SERVICIO TÉCNICO
           </h3>
         </main>
