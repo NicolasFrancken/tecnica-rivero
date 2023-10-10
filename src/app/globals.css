@@ -41,6 +41,13 @@ body {
   background-position: top;
 }
 
+.background4 {
+  background-image: url("../../public/images/background5.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+}
+
 @media only screen and (max-width: 767px) {
   .background1 {
     background-image: url("../../public/images/background3.webp");
