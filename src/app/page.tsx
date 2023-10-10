@@ -40,7 +40,7 @@ export default function Home() {
 
           <Button
             size="lg"
-            className="font-semibold bg-[rgb(179,58,45)] flex text-white mt-3 text-lg sm:text-xl"
+            className="font-semibold bg-[rgb(179,58,45)] flex text-white my-3 text-lg sm:text-xl"
             as={Link}
             href={"#contratá"}
           >
