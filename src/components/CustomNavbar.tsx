@@ -63,6 +63,7 @@ export default function CustomNavbar() {
           as={Link}
           href={button2}
           className="font-bold text-lg hidden md:flex bg-transparent px-0"
+          radius="md"
         >
           Insumos
         </Button>
@@ -73,6 +74,7 @@ export default function CustomNavbar() {
           as={Link}
           href={"/equipos"}
           className="font-bold text-lg hidden md:flex bg-transparent px-0 mr-2"
+          radius="md"
         >
           Equipos
         </Button>
@@ -83,6 +85,7 @@ export default function CustomNavbar() {
           className="font-bold bg-[rgb(179,58,45)] hidden md:flex text-white"
           as={Link}
           href={button1}
+          radius="md"
         >
           CONTRATÁ
         </Button>
@@ -96,6 +99,7 @@ export default function CustomNavbar() {
             as={Link}
             href={button1}
             onClick={handleClick}
+            radius="md"
           >
             CONTRATÁ
           </Button>
@@ -107,6 +111,7 @@ export default function CustomNavbar() {
             as={Link}
             href={"/equipos"}
             onClick={handleClick}
+            radius="md"
           >
             Equipos
           </Button>
@@ -118,6 +123,7 @@ export default function CustomNavbar() {
             as={Link}
             href={button2}
             onClick={handleClick}
+            radius="md"
           >
             Insumos
           </Button>
