@@ -26,7 +26,7 @@ export default function Home() {
       <div>
         <CustomNavbar />
         <main
-          className="min-h-[calc(100vh-70px)] md:min-h-screen py-28 pt-36 md:py-40 px-3 md:px-12 flex flex-col background1 items-center justify-center gap-10"
+          className="min-h-[calc(100vh-70px)] md:min-h-screen py-28 pt-36 md:py-40 px-3 md:px-12 flex flex-col background1 items-center justify-center gap-6"
           id="main"
         >
           <div className="w-full max-w-[890px] flex flex-col gap-2">
