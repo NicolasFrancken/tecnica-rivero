@@ -64,7 +64,7 @@ export default function Home() {
           id="contratá"
         >
           <Card className="flex flex-col">
-            <CardHeader className="p-3 pb-3 md:p-6 md:pb-3 text-2xl md:text-4xl xl:text-5xl font-bold flex justify-center items-center">
+            <CardHeader className="p-3 pb-3 md:p-6 md:pb-3 text-2xl md:text-4xl xl:text-5xl font-bold flex  items-center">
               Contratá nuestros servicios
             </CardHeader>
             <CardBody className="flex flex-col justify-center items-center p-3 pt-0 md:p-6 md:pt-0">
@@ -93,7 +93,7 @@ export default function Home() {
               title="¿Qué incluye?"
               className="font-bold"
             >
-              <ul className="font-semibold text-sm md:text-base xl:text-xl list-disc ml-3 md:ml-6">
+              <ul className="font-semibold text-sm md:text-base xl:text-xl list-disc ml-4 md:ml-6">
                 <li>Asesoramiento en la selección del equipo</li>
                 <li>Todos los insumos y repuestos incluidos*</li>
                 <li className="underline decoration-[rgb(179,58,45)]">
@@ -144,7 +144,8 @@ export default function Home() {
         className="min-h-screen background4 py-16 px-3 md:px-12 2xl:px-96 pt-32 md:pt-40 flex flex-col items-center gap-2 md:gap-6"
       >
         <h3 className="bg-background py-4 px-8 rounded-large text-2xl md:text-3xl xl:text-4xl font-bold text-center w-full lg:w-[910px]">
-          Tenemos todos los insumos
+          Tenemos todos los{" "}
+          <span className="text-[rgb(179,58,45)]">insumos</span>
           {/* <br className="sm:hidden" /> que necesites! */}
         </h3>
         <div className="flex flex-col sm:flex-row gap-2 md:gap-6 lg:gap-20 w-full lg:w-[910px] justify-center items-center">
