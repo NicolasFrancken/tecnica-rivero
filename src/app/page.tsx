@@ -64,7 +64,7 @@ export default function Home() {
           id="contratá"
         >
           <Card className="flex flex-col">
-            <CardHeader className="p-3 pb-3 md:p-6 md:pb-3 text-2xl md:text-4xl xl:text-5xl font-bold flex  items-center">
+            <CardHeader className="p-3 pb-3 md:p-6 md:pb-3 text-2xl md:text-3xl xl:text-4xl font-bold flex  items-center">
               Contratá nuestros servicios
             </CardHeader>
             <CardBody className="flex flex-col justify-center items-center p-3 pt-0 md:p-6 md:pt-0">
