@@ -17,6 +17,7 @@ export default function CustomNavbar() {
   const [logo, setLogo] = useState("#main");
   const [button1, setButton1] = useState("#contratá");
   const [button2, setButton2] = useState("#insumos");
+  const [button3, setButton3] = useState("#soporte");
   const path = usePathname();
 
   useEffect(() => {
@@ -24,10 +25,12 @@ export default function CustomNavbar() {
       setLogo("#main");
       setButton1("#contratá");
       setButton2("#insumos");
+      setButton3("#soporte");
     } else {
       setLogo("https://tecnicarivero.netlify.app/");
       setButton1("https://tecnicarivero.netlify.app/#contratá");
       setButton2("https://tecnicarivero.netlify.app/#insumos");
+      setButton3("https://tecnicarivero.netlify.app/#soporte");
     }
   }, [path]);
 
@@ -42,7 +45,7 @@ export default function CustomNavbar() {
       maxWidth="full"
       isMenuOpen={isMenuOpen}
       onMenuOpenChange={() => setIsMenuOpen(!isMenuOpen)}
-      className="fixed h-20 px-3 md:px-12"
+      className="fixed h-20 px-3 lg:px-12"
       classNames={{
         wrapper: "px-0",
       }}
@@ -66,6 +69,17 @@ export default function CustomNavbar() {
           radius="md"
         >
           Insumos
+        </Button>
+      </NavbarItem>
+      <NavbarItem>
+        <Button
+          size="lg"
+          as={Link}
+          href={"#soporte"}
+          className="font-bold text-lg hidden md:flex bg-transparent px-0"
+          radius="md"
+        >
+          Servicio Tec.
         </Button>
       </NavbarItem>
       <NavbarItem>
@@ -114,6 +128,18 @@ export default function CustomNavbar() {
             radius="md"
           >
             Equipos
+          </Button>
+        </NavbarMenuItem>
+        <NavbarMenuItem>
+          <Button
+            size="md"
+            className="font-semibold bg-transparent "
+            as={Link}
+            href={button3}
+            onClick={handleClick}
+            radius="md"
+          >
+            Servicio Tec.
           </Button>
         </NavbarMenuItem>
         <NavbarMenuItem>

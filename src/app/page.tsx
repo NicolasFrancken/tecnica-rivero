@@ -13,6 +13,7 @@ import {
 } from "@nextui-org/react";
 import CustomNavbar from "@/components/CustomNavbar";
 import Footer from "@/components/Footer";
+import Image from "next/image";
 
 export default function Home() {
   const itemClasses = {
@@ -30,9 +31,9 @@ export default function Home() {
           id="main"
         >
           <div className="w-full max-w-[890px] flex flex-col gap-2">
-            <h1 className="font-bold text-3xl  md:text-5xl xl:text-7xl text-center bg-white px-0 md:px-8 py-4 rounded-large mb-0 md:mb-4">
-              SERVICIO DE ALQUILER <br className="hidden md:inline" />
-              DE <span className="text-[rgb(179,58,45)]">FOTOCOPIADORAS</span>
+            <h1 className="font-bold text-3xl  md:text-5xl xl:text-7xl text-center bg-white px-0 md:px-8 py-8 rounded-large mb-0 md:mb-4">
+              {/* <span className="text-[rgb(179,58,45)]">FOTOCOPIADORAS</span> */}
+              FOTOCOPIADORAS
             </h1>
             {/* 
           <h3 className="font-bold  text-base md:text-2xl xl:text-4xl  text-center md:text-start bg-white/60 px-3 py-1 rounded-medium mt-2 hidden md:flex">
@@ -43,10 +44,16 @@ export default function Home() {
             REPARACIONES Y <br className="md:hidden" /> VENTA DE INSUMOS
           </h3> */}
             <h3 className="font-bold  text-base md:text-2xl xl:text-3xl text-center bg-white py-4 px-0 md:px-8 rounded-large ">
-              REPARACIONES Y VENTA DE INSUMOS
+              ALQUILER Y VENTA DE EQUIPOS
             </h3>
             <h3 className="font-bold  text-base md:text-2xl xl:text-3xl text-center bg-white py-4 px-0 md:px-8 rounded-large">
-              SERVICIO TÉCNICO POST-VENTA
+              <Link
+                href="#soporte"
+                className="font-bold  text-base md:text-2xl xl:text-3xl text-black underline decoration-[rgb(179,58,45)] hover:cursor-pointer"
+              >
+                SERVICIO TÉCNICO
+              </Link>{" "}
+              DE POST-VENTA
             </h3>
           </div>
           <Button
@@ -56,88 +63,128 @@ export default function Home() {
             href={"#contratá"}
             radius="md"
           >
-            ALQUILÁ HOY <BiDownArrowAlt className="h-8 w-6 ml-2" />
+            CONTACTANOS <BiDownArrowAlt className="h-8 w-6 ml-2" />
           </Button>
         </main>
-        <section
-          className="min-h-screen background2 py-16 px-3 md:px-12 2xl:px-96 pt-32 md:pt-40 flex flex-col md:justify-center md:items-center gap-2 md:gap-6"
-          id="contratá"
-        >
-          <Card className="flex flex-col">
-            <CardHeader className="p-3 pb-3 md:p-6 md:pb-3 text-2xl md:text-3xl xl:text-4xl font-bold flex  items-center">
-              Contratá nuestros servicios
-            </CardHeader>
-            <CardBody className="flex flex-col justify-center items-center p-3 pt-0 md:p-6 md:pt-0">
-              <p className="font-semibold text-base md:text-xl xl:text-2xl ">
-                Para comenzar a trabajar con nosotros escribinos un mail a
-                <a
-                  className="text-[rgb(179,58,45)] transition-colors hover:text-[rgb(179,58,45)]/50 underline"
-                  href="mailto:tecnicarivero@gmail.com"
-                >
-                  {" "}
-                  tecnicarivero@gmail.com
-                </a>{" "}
-                o acercarte a nuestro local ubicado en la calle
-                <span className="text-[rgb(179,58,45)]"> Gallardo 202.</span>
-              </p>
-            </CardBody>
-          </Card>
-          <Accordion
-            className="p-0  gap-2 "
-            variant="splitted"
-            itemClasses={itemClasses}
+        <div className=" background2 pb-44">
+          <section
+            className="min-h-screen  py-16 px-3 md:px-12 2xl:px-96 pt-32 md:pt-20 flex flex-col md:justify-center md:items-center gap-2 md:gap-6"
+            id="contratá"
           >
-            <AccordionItem
-              key="1"
-              aria-label="¿Qué incluye?"
-              title="¿Qué incluye?"
-              className="font-bold"
+            <Card className="flex flex-col">
+              <CardHeader className="p-3 pb-3 md:p-6 md:pb-3 text-2xl md:text-3xl xl:text-4xl font-bold flex  items-center">
+                Contratá nuestros servicios
+              </CardHeader>
+              <CardBody className="flex flex-col justify-center items-center p-3 pt-0 md:p-6 md:pt-0">
+                <p className="font-semibold text-base md:text-xl xl:text-2xl ">
+                  Para comenzar a trabajar con nosotros escribinos un mail a
+                  <a
+                    className="text-[rgb(179,58,45)] transition-colors hover:text-[rgb(179,58,45)]/50 underline"
+                    href="mailto:tecnicarivero@gmail.com"
+                  >
+                    {" "}
+                    tecnicarivero@gmail.com
+                  </a>{" "}
+                  o acercarte a nuestro local ubicado en la calle
+                  <span className="text-[rgb(179,58,45)]">
+                    {" "}
+                    Gallardo 202,
+                  </span>{" "}
+                  de Lunes a Viernes de 9 a 18 hs.
+                </p>
+              </CardBody>
+            </Card>
+            <Accordion
+              className="p-0  gap-2 "
+              variant="splitted"
+              itemClasses={itemClasses}
             >
-              <ul className="font-semibold text-sm md:text-base xl:text-xl list-disc ml-4 md:ml-6">
-                <li>Asesoramiento en la selección del equipo</li>
-                <li>Todos los insumos y repuestos incluidos*</li>
-                <li className="underline decoration-[rgb(179,58,45)]">
-                  Servicio técnico personalizado post-venta
-                </li>
-              </ul>
-              <p className="text-xs md:text-sm font-semibold text-right">
-                * No incluye papel
-              </p>
-            </AccordionItem>
-            <AccordionItem
-              key="2"
-              aria-label="¿Cómo funciona?"
-              title="¿Cómo funciona?"
-            >
-              <p className="font-semibold text-sm md:text-base xl:text-xl ">
-                Nuestro <span className="text-[rgb(179,58,45)]">sistema</span>{" "}
-                lo <span className="text-[rgb(179,58,45)]">libera</span> de
-                posibles
-                <span className="text-[rgb(179,58,45)]">
-                  {" "}
-                  inconvenientes
-                </span>, <span className="text-[rgb(179,58,45)]">
-                  costos
-                </span>{" "}
-                operativos y servicio por{" "}
-                <span className="text-[rgb(179,58,45)]">mantenimiento</span>.
-              </p>
-              <p className="font-semibold text-sm md:text-base xl:text-xl">
-                Se define el{" "}
-                <span className="text-[rgb(179,58,45)]">equipo adecuado</span> a
-                la necesidad. Establecemos un abono mensual, que incluye una
-                cantidad de copias libres, de acuerdo al equipo elegido. El
-                abono incluye además, todos los{" "}
-                <span className="text-[rgb(179,58,45)]">insumos</span>,{" "}
-                <span className="text-[rgb(179,58,45)]">repuestos</span>{" "}
-                necesarios y un completo{" "}
-                <span className="text-[rgb(179,58,45)]">servicio técnico</span>{" "}
-                para cubrir cualquier situación relacionada al normal uso y
-                funcionamiento.
-              </p>
-            </AccordionItem>
-          </Accordion>
-        </section>
+              <AccordionItem
+                key="1"
+                aria-label="¿Qué incluye?"
+                title="¿Qué incluye?"
+                className="font-bold"
+              >
+                <ul className="font-semibold text-sm md:text-base xl:text-xl list-disc ml-4 md:ml-6">
+                  <li>Asesoramiento en la selección del equipo</li>
+                  <li>Todos los insumos y repuestos incluidos*</li>
+                  <li className="underline decoration-[rgb(179,58,45)]">
+                    Servicio técnico personalizado post-venta
+                  </li>
+                </ul>
+                <p className="text-xs md:text-sm font-semibold text-right">
+                  * No incluye papel
+                </p>
+              </AccordionItem>
+              <AccordionItem
+                key="2"
+                aria-label="¿Cómo funciona?"
+                title="¿Cómo funciona?"
+              >
+                <p className="font-semibold text-sm md:text-base xl:text-xl ">
+                  Nuestro <span className="text-[rgb(179,58,45)]">sistema</span>{" "}
+                  lo <span className="text-[rgb(179,58,45)]">libera</span> de
+                  posibles
+                  <span className="text-[rgb(179,58,45)]"> inconvenientes</span>
+                  , <span className="text-[rgb(179,58,45)]">costos</span>{" "}
+                  operativos y servicio por{" "}
+                  <span className="text-[rgb(179,58,45)]">mantenimiento</span>.
+                </p>
+                <p className="font-semibold text-sm md:text-base xl:text-xl">
+                  Se define el{" "}
+                  <span className="text-[rgb(179,58,45)]">equipo adecuado</span>{" "}
+                  a la necesidad. Establecemos un abono mensual, que incluye una
+                  cantidad de copias libres, de acuerdo al equipo elegido. El
+                  abono incluye además, todos los{" "}
+                  <span className="text-[rgb(179,58,45)]">insumos</span>,{" "}
+                  <span className="text-[rgb(179,58,45)]">repuestos</span>{" "}
+                  necesarios y un completo{" "}
+                  <span className="text-[rgb(179,58,45)]">
+                    servicio técnico
+                  </span>{" "}
+                  para cubrir cualquier situación relacionada al normal uso y
+                  funcionamiento.
+                </p>
+              </AccordionItem>
+            </Accordion>
+          </section>
+          <section id="soporte" className="pt-[160px]">
+            <div className="bg-white py-16 flex justify-center items-center">
+              <div className="flex flex-col md:flex-row justify-between items-center max-w-[1088px] w-full px-3 gap-6">
+                <div className="max-w-[600px] w-full">
+                  <h3 className=" text-2xl md:text-3xl xl:text-4xl font-bold flex items-center mb-3">
+                    Soporte Técnico
+                  </h3>
+                  <p className="font-semibold text-sm md:text-base xl:text-xl ">
+                    Un soporte técnico especializado, pensado para asegurarte el
+                    máximo rendimiento de tu inversión, es tan importante como
+                    la compra de equipamiento.
+                  </p>
+                  <h4 className="text-foreground font-bold text-lg md:text-xl xl:text-2xl mb-3 mt-6">
+                    ¿Porqué es tan importante?
+                  </h4>
+                  <p className="font-semibold text-sm md:text-base xl:text-xl ">
+                    Porque cualquier equipo, hasta el más sencillo, puede
+                    convertirse en un equipo muy costoso, sin el adecuado
+                    soporte técnico. Y nosotros estamos preparados para
+                    brindarlo. Desde la logística para movernos rápidamente y el
+                    personal capacitado para resolver todas las eventualidades
+                    que pudieran ocurrir.
+                  </p>
+                </div>
+                <div className="flex justify-center items-center w-[300px] md:w-[400px] min-w-[300px]">
+                  <Image
+                    src="/images/tecnico.jpeg"
+                    alt="Técnico trabajando"
+                    width={400}
+                    height={285}
+                    className="shadow-2xl"
+                  />
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
       </div>
       <section
         id="insumos"
